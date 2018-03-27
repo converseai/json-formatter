@@ -173,14 +173,12 @@ angular.module('jsonFormatter', ['RecursionHelper'])
 
     scope.openLink = function (isUrl) {
       if(isUrl) {
-        window.location.href = scope.json;
-        window.location.href = scope.json;
-        if(!!JSONFormatterConfig.openUrlsInNewWindow){
+        if (!!JSONFormatterConfig.openUrlsInNewWindow) {
           var win = window.open(scope.json, '_blank');
           if(win){ 
             win.focus();
           }
-        }else{
+        } else {
           window.location.href = scope.json;
         }
       }
