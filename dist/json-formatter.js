@@ -1,7 +1,7 @@
 /*!
  * jsonformatter
  * 
- * Version: 0.7.1 - 2018-03-27T12:43:56.219Z
+ * Version: 0.7.1 - 2018-03-27T14:01:07.210Z
  * License: Apache-2.0
  */
 
@@ -181,14 +181,12 @@ angular.module('jsonFormatter', ['RecursionHelper'])
 
     scope.openLink = function (isUrl) {
       if(isUrl) {
-        window.location.href = scope.json;
-        window.location.href = scope.json;
-        if(!!JSONFormatterConfig.openUrlsInNewWindow){
+        if (!!JSONFormatterConfig.openUrlsInNewWindow) {
           var win = window.open(scope.json, '_blank');
           if(win){ 
             win.focus();
           }
-        }else{
+        } else {
           window.location.href = scope.json;
         }
       }
